@@ -2,6 +2,7 @@ import "tailwindcss/tailwind.css";
 
 import type { CustomAppProps } from "next/app";
 import Head from "next/head";
+import { appWithTranslation } from "next-i18next";
 
 const App = (props: CustomAppProps) => {
   const getLayout =
@@ -20,4 +21,4 @@ const App = (props: CustomAppProps) => {
   );
 };
 
-export default App;
+export default appWithTranslation(App);

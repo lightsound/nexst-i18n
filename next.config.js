@@ -1,7 +1,10 @@
+const { i18n } = require("./next-i18next.config");
+
 /**
  * @type {import('next/dist/next-server/server/config').NextConfig}
  */
-const nextConfig = {
+const config = {
+  i18n,
   rewrites: async () => {
     return [{ source: "/", destination: "/index" }];
   },
@@ -12,4 +15,4 @@ const nextConfig = {
   poweredByHeader: false,
 };
 
-module.exports = nextConfig;
+module.exports = config;
