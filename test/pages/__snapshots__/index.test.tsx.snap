@@ -4,12 +4,12 @@ exports[`Index page matches snapshot 1`] = `
 <DocumentFragment>
   <div>
     <div>
-      Index
+      common:page.index
     </div>
     <button
       class="p-2"
     >
-      Click me!
+      index:button
     </button>
   </div>
 </DocumentFragment>

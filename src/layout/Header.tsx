@@ -5,8 +5,8 @@ import type { VFC } from "react";
 import { NavLink } from "src/component/Button";
 
 const items = [
-  { href: "/", label: "Index" },
-  { href: "/about", label: "About" },
+  { href: "/", label: "page.index" },
+  { href: "/about", label: "page.about" },
 ];
 
 const locales = [
@@ -23,8 +23,6 @@ export const Header: VFC = () => {
 
   return (
     <header>
-      <h1>{t("title")}</h1>
-
       <ul>
         {locales.map(({ lang, label }) => {
           return (
@@ -41,7 +39,7 @@ export const Header: VFC = () => {
         {items.map(({ href, label }) => {
           return (
             <NavLink key={href} href={href} activeClassName="text-red-500">
-              <a className="inline-block p-4">{label}</a>
+              <a className="inline-block p-4">{t(label).toUpperCase()}</a>
             </NavLink>
           );
         })}

@@ -1,4 +1,5 @@
 import type { CustomNextPage, GetStaticProps } from "next";
+import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { FixedLayout } from "src/layout";
 
@@ -8,7 +9,8 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 };
 
 const About: CustomNextPage = () => {
-  return <div>About</div>;
+  const { t } = useTranslation("common");
+  return <div>{t("page.about")}</div>;
 };
 
 About.getLayout = FixedLayout;

@@ -1,3 +1,6 @@
 {
-  "title": "Title"
+  "page": {
+    "index": "index",
+    "about": "about"
+  }
 }
